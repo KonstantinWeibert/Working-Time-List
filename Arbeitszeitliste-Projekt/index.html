@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arbeitszeiten</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <div class="template">
+      <h1 class="title js-title">Bitte rechts Namen eingeben</h1>
+
+      <div class="header">
+        <input type="date" class="date-input js-date-input" />
+
+        <div class="from">
+          <div>Von</div>
+          <input type="time" class="time-interval js-time-interval1" />
+        </div>
+
+        <div class="until">
+          <div>Bis</div>
+          <input type="time" class="time-interval js-time-interval2" />
+        </div>
+        <button class="add-button js-add-button">Hinzufügen</button>
+
+        <select class="month-input js-month-input" id="monthSelect">
+          <option value="01">Januar</option>
+          <option value="02">Februar</option>
+          <option value="03">März</option>
+          <option value="04">April</option>
+          <option value="05">Mai</option>
+          <option value="06">Juni</option>
+          <option value="07">Juli</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">Oktober</option>
+          <option value="11">November</option>
+          <option value="12">Dezember</option>
+        </select>
+      </div>
+
+      <div class="grid">
+        <div class="times">
+          <div class="js-times"></div>
+        </div>
+        <div class="info-grid">
+          <div class="working-time"></div>
+          <div class="wage"></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="settings-button js-settings-button">
+      <img src="images/gearIcon.png" alt="settings" />
+      <div class="tooltip">Einstellungen</div>
+    </button>
+
+    <div class="input-box js-input-box">
+      <div class="name-input-box js-name-input-box">
+        <input
+          type="text"
+          placeholder="Vor- und Nachname"
+          class="name-input js-name-input"
+        />
+        <button class="name-input-button js-name-input-button">
+          Hinzufügen
+        </button>
+      </div>
+      <div class="wage-input-box js-wage-input-box">
+        <input
+          type="text"
+          placeholder="Stundenlohn"
+          maxlength="5"
+          class="hourly-wage js-hourly-wage"
+        />
+        <button class="wage-input-button js-wage-input-button">
+          Hinzufügen
+        </button>
+      </div>
+    </div>
+
+    <div class="pop-up js-pop-up">
+      <p class="error-text js-error-text"></p>
+      <button class="confirm-button js-confirm-button">Bestätigen</button>
+    </div>
+
+    <div class="overlay js-overlay"></div>
+  </body>
+  <script type="module" src="scripts/script.js"></script>
+</html>

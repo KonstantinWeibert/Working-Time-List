@@ -1,0 +1,233 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+h1 {
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 520px;
+  height: 20px;
+
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding-bottom: 11px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.from,
+.until {
+  height: 40px;
+  margin-bottom: 20px;
+  align-self: center;
+  user-select: none;
+}
+
+.date-input {
+  font-size: 12px;
+}
+
+.time-interval {
+  user-select: unset;
+}
+
+.add-button,
+.name-input-button,
+.wage-input-button,
+.confirm-button {
+  align-self: center;
+  
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  height: 30px;
+}
+
+.add-button:active,
+.name-input-button:active,
+.wage-input-button:active,
+.confirm-button:active,
+.remove-button:active,
+.edit-button:active {
+  background-color: rgb(110, 110, 110);
+  color: black;
+  transition:  background-color 0.15s ease-in-out;
+}
+
+.month-input {
+  right: 120px;
+  width: 95px;
+}
+
+.grid {
+  margin-left: 20px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  width: 100px; /* ? */
+}
+
+
+.remove-button,
+.edit-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.period-of-time {
+  min-width: 160px;
+  margin-left: 10px;
+}
+
+.time-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  position: relative;
+  width: 520px; 
+}
+
+.edit-date-input {
+  width: 66px;
+  height: 15px;
+}
+
+.edit-time-input {
+  width: 33px;
+  height: 15px;
+}
+
+.info-grid {
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+  
+  margin-top: 20px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50px;
+  right: 22px;
+}
+ 
+.name-input-box,
+.wage-input-box {
+  display: none;
+  justify-content: space-between;
+  width: 240px;
+  margin-top: 12px;
+}
+
+.name-input-button,
+.wage-input-button {
+  margin-left: 10px;
+}
+
+.settings-button {
+  box-sizing: content-box;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  background: none;
+  border: none;
+  height: 10px;
+  cursor: pointer;
+}
+
+.settings-button img {
+  width: 30px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 6px;
+  font-size: 10px;
+  top: -12px;
+  right: 40px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+.settings-button:hover .tooltip {
+  opacity: 1;
+}
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pop-up.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.error-text {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.confirm-button {
+  height: 30px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
